@@ -28,5 +28,4 @@ Abra `index.html` no navegador — ou sirva a pasta com qualquer servidor estát
 Intervenções de design registradas em `docs/diario_impeccable.md`.
 
 ## Versão publicada
-
-[Link aqui]
+[Ver portfólio online](https://calegermano.github.io/Portifolio_Profissional-Carlos_Alexandre/ )
