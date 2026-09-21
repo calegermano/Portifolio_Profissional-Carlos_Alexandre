@@ -1,0 +1,27 @@
+// Interação básica — exigência técnica de JavaScript
+// 1) Boas-vindas no console | 2) Alerta ao clicar no asterisco da marca | 3) Troca de cor ao clicar nos selos
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Bem-vindo(a) ao portfólio de Carlos Alexandre! ★");
+
+  const marca = document.querySelector(".brand-asterisk");
+  if (marca) {
+    marca.style.cursor = "pointer";
+    marca.title = "Clique para boas-vindas";
+    marca.addEventListener("click", () => {
+      alert("Bem-vindo(a) ao meu portfólio! Sou Carlos Alexandre, dev ADS (C, Java, PHP).");
+    });
+  }
+
+  const selos = document.querySelectorAll(".carimbo-cobalto, .avatar-selo");
+  selos.forEach((selo) => {
+    selo.style.cursor = "pointer";
+    selo.title = "Clique para trocar a cor";
+    selo.addEventListener("click", () => {
+      const atual = selo.dataset.invertido === "true";
+      selo.style.background = atual ? "" : "#0a0a0a";
+      selo.style.color = atual ? "" : "#ffffff";
+      selo.dataset.invertido = String(!atual);
+    });
+  });
+});
